@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Google Review</title>
+  </head>
+  <body>
+
+    <div id="google-reviews"></div>
+
+    <link rel="stylesheet" href="https://cdn.rawgit.com/stevenmonson/googleReviews/master/google-places.css"/>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.1.1/jquery.min.js"></script>
+    <script src="https://cdn.rawgit.com/stevenmonson/googleReviews/6e8f0d79/google-places.js"></script>
+    <script src="https://maps.googleapis.com/maps/api/js?v=3.exp&key=AIzaSyBKv2ij3W_RfvR4bg82R92inwE-7F0QiDc&signed_in=true&libraries=places"></script>
+    
+    <script>
+      jQuery(document).ready(function ($) {
+        $("#google-reviews").googlePlaces({
+          placeId: "ChIJ6Zgp8REZ2jERKgNTh7hU5EM", //Find placeID https://developers.google.com/places/place-id
+          render: ["reviews"],
+          min_rating: 4,
+          max_rows: 4,
+        });
+      });
+    </script>
+
+  </body>
+</html>
